@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"> <!-- 浅灰色背景（替代黑色） -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="用户书籍数量统计"
+        android:textColor="#333333"
+    android:textSize="20sp"
+    android:gravity="center"
+    android:layout_marginTop="20dp"/>
+
+    <!-- 书籍数量图表：增加底部边距，预留X轴标签空间 -->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/book_count_chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="50dp"/> <!-- 增加底部边距，避免X轴文字被遮挡 -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"/> <!-- 浅灰色分隔线 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="用户书评数量统计"
+        android:textColor="#333333"
+    android:textSize="20sp"
+    android:gravity="center"
+    android:layout_marginTop="10dp"/>
+
+    <!-- 书评数量图表：同样增加底部边距 -->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/review_count_chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="50dp"/> <!-- 增加底部边距 -->
+
+</LinearLayout>

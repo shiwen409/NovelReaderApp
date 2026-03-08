@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/admin_bg">
+
+    <!-- 顶部返回和标题栏：使用渐变背景 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/admin_title_bg"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_detail"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+
+    <!-- 书籍信息和内容区域 (使用ScrollView包裹) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/admin_listview_bg"
+            android:padding="16dp"
+            android:elevation="2dp">
+
+            <!-- 书籍封面和基本信息 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp" >
+
+                <ImageView
+                    android:id="@+id/iv_detail_cover"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/ic_book"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/admin_listview_bg"
+                    android:padding="2dp"
+                    android:elevation="2dp"/>
+
+                <TextView
+                    android:id="@+id/tv_detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="书籍名称"
+                    android:textSize="22sp"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_detail_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="作者：未知"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorGray"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- 书籍状态信息行 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:spacing="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_detail_serial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="连载中"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:id="@+id/tv_detail_word_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="字数：0"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGray"/>
+
+                    <TextView
+                        android:id="@+id/tv_detail_read_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="阅读量：0"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGray"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 书籍简介 -->
+            <TextView
+                android:id="@+id/tv_detail_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="暂无简介"
+                android:textSize="16sp"
+                android:lineSpacingExtra="8dp"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部操作栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_detail_add"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:text="加入书架"
+            android:textSize="16sp"
+            android:background="@drawable/admin_btn_bg"
+            android:textColor="@android:color/white"
+            android:elevation="2dp"/>
+
+        <Button
+            android:id="@+id/btn_detail_read"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:text="阅读"
+            android:textSize="16sp"
+            android:background="@drawable/admin_btn_bg"
+            android:textColor="@android:color/white"
+            android:elevation="2dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

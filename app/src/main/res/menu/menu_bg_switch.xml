@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 文字大小控制 -->
+    <item
+        android:id="@+id/action_text_size"
+        android:title="文字大小">
+        <menu>
+            <item
+                android:id="@+id/action_text_size_increase"
+                android:title="增大"/>
+            <item
+                android:id="@+id/action_text_size_decrease"
+                android:title="减小"/>
+        </menu>
+    </item>
+
+    <!-- 行距控制 -->
+    <item
+        android:id="@+id/action_line_spacing"
+        android:title="行距设置">
+        <menu>
+            <item
+                android:id="@+id/action_line_spacing_increase"
+                android:title="增大行距"/>
+            <item
+                android:id="@+id/action_line_spacing_decrease"
+                android:title="减小行距"/>
+        </menu>
+    </item>
+
+    <!-- 背景切换子菜单 -->
+    <item
+        android:id="@+id/action_bg_switch"
+        android:title="切换背景">
+        <menu>
+            <item
+                android:id="@+id/action_bg1"
+                android:title="背景1"/>
+            <item
+                android:id="@+id/action_bg2"
+                android:title="背景2"/>
+            <item
+                android:id="@+id/action_bg3"
+                android:title="背景3"/>
+        </menu>
+    </item>
+</menu>

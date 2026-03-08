@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:background="@drawable/admin_title_bg"
+    android:padding="5dp"
+    android:elevation="3dp">
+
+    <TextView
+        android:id="@+id/tv_nav_bookstore"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:drawableTop="@drawable/home"
+        android:drawablePadding="5dp"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:text="@string/title_bookstore"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_nav_bookshelf"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/title_bookshelf"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:drawableTop="@drawable/ic_action_bookshelf"
+        android:drawablePadding="5dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+    <TextView
+        android:id="@+id/tv_nav_setting"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/title_setting"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:drawableTop="@drawable/ic_action_setting"
+        android:drawablePadding="5dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+</LinearLayout>

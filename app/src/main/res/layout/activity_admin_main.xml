@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/admin_bg"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="100dp"
+    android:paddingBottom="20dp">
+
+    <!-- 标题：增强视觉效果，与主题呼应 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="30dp"
+        android:text="管理员中心"
+        android:textSize="40sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/admin_title_bg"
+        android:shadowColor="#803F51B5"
+        android:shadowRadius="3"
+        android:shadowDx="1"
+        android:shadowDy="1" />
+
+    <!-- 用户管理按钮：圆角+渐变+按压反馈 -->
+    <Button
+        android:id="@+id/btn_user_manage"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="用户管理"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/admin_btn_bg"
+        android:textColor="@android:color/white"
+        android:elevation="2dp" />
+
+    <!-- 查看用户书架按钮：与上一个按钮风格统一 -->
+    <Button
+        android:id="@+id/btn_bookshelf_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="查看用户书架"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/admin_btn_bg"
+        android:textColor="@android:color/white"
+        android:elevation="2dp" />
+
+    <Button
+        android:id="@+id/btn_review_manage"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="书评管理"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/admin_btn_bg"
+        android:textColor="@android:color/white"
+        android:elevation="2dp" />
+
+    <Button
+        android:id="@+id/btn_admin_stat"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="书籍书评统计"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/admin_btn_bg"
+        android:textColor="@android:color/white"
+        android:elevation="2dp" />
+
+    <!-- 退出登录按钮：优化红色风格，保持按压反馈 -->
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/admin_btn_logout_bg"
+        android:text="退出登录"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:elevation="2dp" />
+
+</LinearLayout>

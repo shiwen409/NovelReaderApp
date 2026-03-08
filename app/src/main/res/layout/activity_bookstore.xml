@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/admin_bg">
+
+    <!-- 顶部搜索栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@drawable/admin_title_bg"
+        android:elevation="3dp">
+
+        <EditText
+            android:id="@+id/et_bookstore_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/hint_book_title"
+            android:background="@drawable/admin_spinner_bg"
+            android:paddingLeft="15dp"
+            android:textColorHint="@color/colorGray"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btn_bookstore_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/btn_search"
+            android:background="@drawable/admin_btn_bg"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+    </LinearLayout>
+
+    <!-- 中间书籍列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bookstore"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/admin_listview_bg"
+        android:layout_margin="8dp"
+        android:padding="2dp"/>
+
+    <!-- 引入底部导航栏 -->
+    <include layout="@layout/layout_bottom_nav"/>
+
+</LinearLayout>

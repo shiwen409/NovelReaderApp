@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    android:orientation="vertical">
+
+    <!-- 章节标题 -->
+    <TextView
+        android:id="@+id/tv_chapter_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:background="@drawable/admin_title_bg"
+        android:textColor="@android:color/white"
+        android:elevation="3dp"/>
+
+    <!-- 章节内容 + 目录弹窗容器（FrameLayout实现叠加） -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- 原有阅读内容 -->
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:lineSpacingExtra="15dp"
+                android:breakStrategy="balanced"
+                android:hyphenationFrequency="none"/>
+        </ScrollView>
+
+        <!-- 目录弹窗（默认隐藏） -->
+        <LinearLayout
+            android:id="@+id/layout_chapter_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/admin_listview_bg"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:elevation="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="章节列表"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/admin_title_bg"/>
+
+            <ListView
+                android:id="@+id/lv_chapters"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:divider="@color/colorDivider"
+                android:dividerHeight="0.8dp"
+                android:padding="2dp"/>
+
+            <Button
+                android:id="@+id/btn_close_chapter"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="关闭"
+                android:background="@drawable/admin_btn_bg"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 顶部功能栏（默认隐藏） -->
+    <LinearLayout
+        android:id="@+id/top_function_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:elevation="3dp">
+
+
+        <Button
+            android:id="@+id/btn_chapter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="目录"
+            android:textSize="16sp"
+            android:background="@drawable/admin_btn_bg"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="5dp"/>
+
+        <Button
+            android:id="@+id/btn_progress"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="进度"
+            android:textSize="16sp"
+            android:background="@drawable/admin_btn_bg"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <Button
+            android:id="@+id/btn_setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="设置"
+            android:textSize="16sp"
+            android:background="@drawable/admin_btn_bg"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <Button
+            android:id="@+id/btn_book_review"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="书评"
+            android:textSize="16sp"
+            android:background="@drawable/admin_btn_bg"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+    <!-- 进度操作栏（默认隐藏） -->
+    <LinearLayout
+        android:id="@+id/layout_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_prev_chapter"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="上一章"
+            android:background="@drawable/admin_btn_bg"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/btn_next_chapter"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="下一章"
+            android:background="@drawable/admin_btn_bg"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+    <!-- 原有底部菜单（改为默认隐藏，通过设置按钮显示） -->
+    <include
+        layout="@layout/bottom_menu"
+        android:visibility="gone"/>
+
+</LinearLayout>

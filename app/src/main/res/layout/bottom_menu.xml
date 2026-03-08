@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <!-- 原有功能 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <!-- 文字大小控制 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:spacing="6dp">
+            <Button
+                android:id="@+id/btn_text_decrease"
+                style="@style/ReaderBtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A-"/>
+            <Button
+                android:id="@+id/btn_text_increase"
+                style="@style/ReaderBtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A+"/>
+        </LinearLayout>
+
+        <!-- 行距控制 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:spacing="6dp">
+            <Button
+                android:id="@+id/btn_line_decrease"
+                style="@style/ReaderBtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L-"/>
+            <Button
+                android:id="@+id/btn_line_increase"
+                style="@style/ReaderBtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L+"/>
+        </LinearLayout>
+
+        <!-- 背景切换 -->
+        <Spinner
+            android:id="@+id/spinner_bg"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:entries="@array/background_options"
+            android:prompt="@string/select_background"
+            android:background="@drawable/reader_spinner_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="14sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- 新增翻页模式切换 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="翻页模式："
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+        <RadioGroup
+            android:id="@+id/rg_page_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/rb_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上下"
+                android:textColor="@android:color/white"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rb_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左右"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="15dp"/>
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>

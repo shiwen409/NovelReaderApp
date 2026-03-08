@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/admin_bg">
+
+    <!-- 标题：登录 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/title_login"
+        android:textColor="@android:color/white"
+        android:background="@drawable/admin_title_bg"
+        android:textSize="24sp"
+        android:shadowColor="#803F51B5"
+        android:shadowRadius="3"
+        android:shadowDx="1"
+        android:shadowDy="1"/>
+
+    <!-- 登录表单容器 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/admin_listview_bg"
+        android:padding="20dp"
+        android:elevation="3dp">
+
+        <!-- 用户名输入框 -->
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/hint_username"
+            android:background="@drawable/admin_spinner_bg"
+            android:paddingLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:inputType="text"/>
+
+        <!-- 密码输入框 -->
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/hint_password"
+            android:background="@drawable/admin_spinner_bg"
+            android:paddingLeft="15dp"
+            android:layout_marginBottom="30dp"
+            android:inputType="textPassword"/>
+
+        <!-- 登录按钮 -->
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/btn_login"
+            android:background="@drawable/admin_btn_bg"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="15dp"
+            android:elevation="2dp"/>
+
+    </LinearLayout>
+
+    <!-- 注册跳转文本 -->
+    <TextView
+        android:id="@+id/tv_go_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="还没有账号？点击注册"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+</LinearLayout>

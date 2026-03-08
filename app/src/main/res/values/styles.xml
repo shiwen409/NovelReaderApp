@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 基础主题 -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@android:color/white</item> <!-- 添加android:前缀 -->
+    </style>
+
+    <!-- 白天主题 -->
+    <style name="DayTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/colorLightGray</item> <!-- 添加android:前缀 -->
+        <item name="cardBackgroundColor">@color/colorWhite</item> <!-- 自定义属性无需前缀 -->
+        <item name="android:textColorPrimary">@color/colorBlack</item> <!-- 添加android:前缀 -->
+        <item name="android:textColorSecondary">@color/colorGray</item> <!-- 添加android:前缀 -->
+    </style>
+
+    <!-- 黑夜主题 -->
+    <style name="NightTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/dark_bg</item> <!-- 添加android:前缀 -->
+        <item name="cardBackgroundColor">@color/dark_card</item> <!-- 自定义属性无需前缀 -->
+        <item name="android:textColorPrimary">@color/dark_text</item> <!-- 添加android:前缀 -->
+        <item name="android:textColorSecondary">@color/dark_text_secondary</item> <!-- 添加android:前缀 -->
+    </style>
+
+    <style name="ReaderBtnStyle" parent="Widget.AppCompat.Button">
+        <!-- 按钮背景：圆角+纯色，可根据主题调整 -->
+        <item name="android:background">@drawable/reader_btn_bg</item>
+        <!-- 按钮文字大小 -->
+        <item name="android:textSize">14sp</item>
+        <!-- 按钮文字颜色 -->
+        <item name="android:textColor">@android:color/black</item>
+        <!-- 按钮内边距 -->
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <!-- 按钮最小宽度（统一大小） -->
+        <item name="android:minWidth">40dp</item>
+        <item name="android:minHeight">35dp</item>
+
+
+    </style>
+</resources>

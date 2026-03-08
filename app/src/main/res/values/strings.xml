@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">小说阅读APP</string>
+    <!-- 页面标题 -->
+    <string name="title_login">用户登录</string>
+    <string name="title_register">用户注册</string>
+    <string name="title_bookshelf">我的书架</string>
+    <string name="title_bookstore">书城</string>
+    <string name="title_search">搜索书籍</string>
+    <string name="title_detail">书籍详情</string>
+    <string name="title_setting">设置</string>
+    <!-- 按钮文字 -->
+    <string name="btn_login">登录</string>
+    <string name="btn_register">注册</string>
+    <string name="btn_add_bookshelf">加入书架</string>
+    <string name="btn_search">搜索</string>
+    <string name="btn_location_auto">自动获取位置</string>
+    <string name="btn_location_manual">手动选择</string>
+    <!-- 提示文字 -->
+    <string name="hint_username">请输入用户名</string>
+    <string name="hint_password">请输入密码</string>
+    <string name="hint_confirm_pwd">请确认密码</string>
+    <string name="hint_book_title">请输入书名</string>
+    <string name="hint_book_author">请输入作者名</string>
+    <string name="toast_login_required">请先登录！</string>
+    <string name="toast_register_success">注册成功！</string>
+    <string name="toast_add_success">已加入书架！</string>
+    <string name="toast_network_error">网络错误，请重试！</string>
+    <string name="toast_location_success">位置获取成功：%s</string>
+
+    <string name="select_background">选择背景</string>
+
+    <string name="book_review_title">书评区</string>
+</resources>

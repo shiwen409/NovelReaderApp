@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/admin_bg"
+>
+
+    <!-- 顶部标题栏 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/title_bookshelf"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/admin_title_bg"
+        android:layout_marginBottom="12dp"
+        android:elevation="3dp" />
+
+    <!-- 书架书籍列表 -->
+    <ListView
+        android:id="@+id/lv_bookshelf"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/admin_listview_bg"
+        android:divider="@color/colorDivider"
+        android:dividerHeight="0.8dp"
+        android:padding="2dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical" />
+
+    <!-- 引入底部导航栏 -->
+    <include layout="@layout/layout_bottom_nav"/>
+
+</LinearLayout>

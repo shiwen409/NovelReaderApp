@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/admin_listview_bg"
+    android:layout_margin="5dp"
+    android:elevation="2dp">
+
+    <TextView
+        android:id="@+id/tv_book_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="书籍标题"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_review_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/tv_review_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2025-01-01 12:00"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_review_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="这是一条书评内容..."
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="5dp"/>
+
+    <Button
+        android:id="@+id/btn_delete_review"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="删除"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/admin_btn_logout_bg"
+        android:textColor="@android:color/white"
+        android:layout_gravity="end"/>
+
+</LinearLayout>

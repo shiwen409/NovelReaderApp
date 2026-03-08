@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/admin_bg"
+    android:padding="8dp">
+
+    <!-- 标题栏 -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/admin_title_bg"
+        android:elevation="3dp"
+        android:gravity="center"
+        android:text="@string/book_review_title"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <!-- 书评列表 -->
+    <ListView
+        android:id="@+id/lv_reviews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView"
+        android:background="@drawable/admin_listview_bg"
+        android:divider="@color/colorDivider"
+        android:dividerHeight="0.8dp"
+        android:padding="2dp"
+        android:layout_above="@+id/write_review_container"/>
+
+    <!-- 写书评输入框容器（默认隐藏） -->
+    <LinearLayout
+        android:id="@+id/write_review_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/admin_listview_bg"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_review_content"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="写下你的书评..."
+            android:background="@drawable/admin_spinner_bg"
+            android:padding="10dp"
+            android:gravity="top"/>
+
+        <Button
+            android:id="@+id/btn_submit_review"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="提交书评"
+            android:background="@drawable/admin_btn_bg"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <!-- 悬浮写书评按钮（右下角） -->
+    <Button
+        android:id="@+id/btn_write_review"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/pencil"
+        android:scaleType="center"
+        android:elevation="5dp"/>
+
+</RelativeLayout>

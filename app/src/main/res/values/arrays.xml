@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="background_options">
+        <item>默认背景</item>
+        <item>烟柳春深</item>
+        <item>朝曦雾隐</item>
+        <item>青岚落樱</item>
+        <item>云栖灵境</item>
+        <item>星澜幻海</item>
+        <item>绯樱织梦</item>
+        <item>荷影双栖</item>
+        <item>剑锁烟岚</item>
+        <item>青枝叙笺</item>
+        <item>星海遥思</item>
+    </string-array>
+</resources>

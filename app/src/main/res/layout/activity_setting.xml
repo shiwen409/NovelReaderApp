@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/admin_bg">
+
+    <!-- 核心内容区域：占满除底部导航外的所有空间 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/admin_bg"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/admin_title_bg"
+            android:text="@string/title_setting"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+        android:background="@drawable/admin_listview_bg"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="个人信息"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="用户名：未登录"
+            android:textColor="@color/colorGray"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_change_username"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/admin_btn_bg"
+            android:text="修改用户名"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/admin_btn_bg"
+            android:text="修改密码"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_delete_account"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+        android:background="@drawable/admin_btn_logout_bg"
+        android:text="注销账号"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:text="地区："
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_area"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+        android:background="@drawable/admin_spinner_bg"
+        android:hint="请输入地区或点击自动获取"
+        android:paddingHorizontal="10dp"
+        android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+    android:background="@drawable/admin_listview_bg"
+    android:elevation="2dp"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="位置设置"
+        android:textColor="@color/colorBlack"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+    android:text="当前位置：未获取"
+    android:textColor="@color/colorGray"
+    android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_auto_location"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="0dp"
+    android:background="@drawable/admin_btn_bg"
+    android:elevation="2dp"
+    android:text="@string/btn_location_auto"
+    android:textColor="@android:color/white"
+    android:textSize="15sp" />
+
+</LinearLayout>
+
+    <!-- 退出登录按钮：调整顶部间距，确保完整显示 -->
+<Button
+android:id="@+id/btn_logout"
+android:layout_width="match_parent"
+android:layout_height="45dp"
+android:layout_marginTop="8dp"
+    android:background="@drawable/admin_btn_logout_bg"
+    android:elevation="2dp"
+    android:text="退出登录"
+    android:textColor="@android:color/white"
+    android:textSize="15sp"
+    android:visibility="gone" />
+
+    <!-- 登录按钮：微调顶部间距，避免挤压 -->
+<Button
+android:id="@+id/btn_login"
+android:layout_width="match_parent"
+android:layout_height="45dp"
+android:layout_marginTop="4dp"
+    android:background="@drawable/admin_btn_bg"
+    android:elevation="2dp"
+    android:text="登录"
+    android:textColor="@android:color/white"
+    android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <!-- 底部导航栏：固定在页面最底部 -->
+<include
+layout="@layout/layout_bottom_nav"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"/>
+
+    </LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/admin_bg"
+    android:orientation="vertical"
+    android:padding="8dp"> <!-- 根布局内边距，避免控件贴边 -->
+
+    <!-- 标题栏：使用渐变圆角背景+阴影，增强视觉层次 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="用户管理"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/admin_title_bg"
+        android:layout_marginBottom="12dp"
+        android:elevation="3dp" />
+
+    <!-- ListView：美化背景、分隔线，优化展示效果 -->
+    <ListView
+        android:id="@+id/lv_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/admin_listview_bg"
+        android:divider="@color/colorDivider"
+        android:dividerHeight="0.8dp"
+        android:padding="2dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

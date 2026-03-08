@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/admin_bg">
+
+    <!-- 标题：注册 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/title_register"
+        android:textColor="@android:color/white"
+        android:background="@drawable/admin_title_bg"
+        android:textSize="24sp"
+        android:shadowColor="#803F51B5"
+        android:shadowRadius="3"
+        android:shadowDx="1"
+        android:shadowDy="1"/>
+
+    <!-- 注册表单容器 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/admin_listview_bg"
+        android:padding="20dp"
+        android:elevation="3dp">
+
+        <!-- 用户名输入框 -->
+        <EditText
+            android:id="@+id/et_register_username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/hint_username"
+            android:background="@drawable/admin_spinner_bg"
+            android:paddingLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:inputType="text"/>
+
+        <!-- 密码输入框 -->
+        <EditText
+            android:id="@+id/et_register_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/hint_password"
+            android:background="@drawable/admin_spinner_bg"
+            android:paddingLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:inputType="textPassword"/>
+
+        <!-- 确认密码输入框 -->
+        <EditText
+            android:id="@+id/et_register_confirm_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/hint_confirm_pwd"
+            android:background="@drawable/admin_spinner_bg"
+            android:paddingLeft="15dp"
+            android:layout_marginBottom="30dp"
+            android:inputType="textPassword"/>
+
+        <!-- 注册按钮 -->
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/btn_register"
+            android:background="@drawable/admin_btn_bg"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:elevation="2dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
